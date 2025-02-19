@@ -17,9 +17,7 @@ const BlogPost: React.FC = () => {
   if (!post) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-600 dark:text-gray-300">
-          {t("common.noResults")}
-        </p>
+        <p className="text-gray-300">{t("common.noResults")}</p>
       </div>
     );
   }
@@ -28,36 +26,34 @@ const BlogPost: React.FC = () => {
     <div className="max-w-4xl mx-auto">
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 mb-8"
+        className="flex items-center text-gray-300 hover:text-blue-400 mb-8"
       >
         <ArrowLeft className="h-5 w-5 mr-2" />
         Back
       </button>
 
-      <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <article className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
         <img
-          src={post.image}
+          src={post.image || content.default_blog_image}
           alt={post.title}
           className="w-full h-96 object-cover"
         />
         <div className="p-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            {post.title}
-          </h1>
-          <p className="text-gray-500 dark:text-gray-400 mb-6">
+          <h1 className="text-3xl font-bold text-white mb-4">{post.title}</h1>
+          <p className="text-gray-400 mb-6">
             {new Date(post.date).toLocaleDateString()}
           </p>
           <div className="flex flex-wrap gap-2 mb-8">
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-sm"
+                className="px-3 py-1 bg-blue-900 text-blue-400 rounded-full text-sm"
               >
                 {tag}
               </span>
             ))}
           </div>
-          <div className="prose dark:prose-invert max-w-none">
+          <div className="prose-invert max-w-none">
             <ReactMarkdown
               components={{
                 code({

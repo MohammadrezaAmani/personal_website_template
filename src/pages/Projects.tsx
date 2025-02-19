@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import content from "../data/content";
 
@@ -16,7 +16,7 @@ const Projects = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+      <h1 className="text-3xl font-bold text-white mb-8">
         {t("projects.title")}
       </h1>
 
@@ -30,7 +30,7 @@ const Projects = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 selectedTag === tag
                   ? "bg-blue-600 text-white"
-                  : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
               }`}
             >
               {tag}
@@ -44,25 +44,23 @@ const Projects = () => {
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            className="bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
           >
             <img
-              src={project.image}
+              src={project.image || content.default_project_image}
               alt={project.title}
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-white mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {project.description}
-              </p>
+              <p className="text-gray-300 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-sm"
+                    className="px-3 py-1 bg-blue-900 text-blue-400 rounded-full text-sm"
                   >
                     {tag}
                   </span>
@@ -72,7 +70,7 @@ const Projects = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-blue-600 dark:text-blue-400 hover:underline"
+                className="inline-block text-blue-400 hover:underline"
               >
                 {t("projects.viewProject")} →
               </a>

@@ -19,13 +19,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen  dark:bg-gray-900 bg-gray-900">
-      <nav className="bg-white dark:bg-gray-900 shadow-md">
+    <div className="flex flex-col min-h-screen  bg-gray-900 ">
+      <nav className="bg-gray-900 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8">
-          <Link
-            to="/"
-            className="text-xl font-bold text-gray-800 dark:text-white"
-          >
+          <Link to="/" className="text-xl font-bold text-white">
             {data.site_name}
           </Link>
 
@@ -36,8 +33,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 to={path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === path
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "text-blue-400"
+                    : "text-gray-300 hover:hover:text-blue-400"
                 }`}
               >
                 {name}
@@ -47,7 +44,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300"
+            className="md:hidden p-2 rounded-md text-gray-300"
             aria-label="Toggle Menu"
           >
             <Menu className="h-6 w-6" />
@@ -56,7 +53,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+          <div className="md:hidden bg-gray-900 border-t border-gray-700">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map(({ name, path }) => (
                 <Link
@@ -64,8 +61,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                   to={path}
                   className={`block px-3 py-2 rounded-md text-base font-medium ${
                     location.pathname === path
-                      ? "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400"
-                      : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      ? "bg-blue-900 text-blue-400"
+                      : "text-gray-300 hover:hover:bg-gray-700"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -81,8 +78,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         {children}
       </main>
 
-      <footer className="bg-white dark:bg-gray-900 shadow-md mt-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-gray-600 dark:text-gray-300">
+      <footer className="bg-gray-900 shadow-md mt-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-gray-300">
           {data.footer_note}
         </div>
       </footer>

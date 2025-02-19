@@ -10,6 +10,11 @@ import {
 export default {
   site_name: "Mohammadreza Amani",
   footer_note: `© ${new Date().getFullYear()} Portfolio. All rights reserved.`,
+  default_project_image:
+    "https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322",
+  default_blog_image:
+    "https://www-static.cdn-one.com/cmsimages/en_what-is-a-blog-1.png",
+  default_user_image: "https://avatars.githubusercontent.com/u/55929607?v=4",
   about: {
     name: "Mohammadreza Amani",
     title: "Software Engineer & AI Specialist",
@@ -138,13 +143,6 @@ export default {
     {
       id: 1,
       institution: "Polytechnic University, Tehran",
-      degree: "Master of Science, Artificial Intelligence",
-      period: "2024 – Present",
-      description: "Specializing in AI, LLMs, and distributed computing.",
-    },
-    {
-      id: 2,
-      institution: "Polytechnic University, Tehran",
       degree: "Bachelor of Science, Computer Science",
       period: "2020",
       description: "Focused on backend development and cloud computing.",
@@ -166,7 +164,8 @@ export default {
       description:
         "AI chatbot for investment recommendations, ROI predictions, and market analysis, deployed in Isfahan and expanding to Dubai.",
       tags: ["AI", "Machine Learning", "Finance"],
-      image: null,
+      image:
+        "https://www.investopedia.com/thmb/GMKaRhdGn5dOSqVS-F-q_VtTGek=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/investment-ec4b8aab8c50432a9fd6707ed1c2749a.jpg",
       link: "https://github.com/MohammadrezaAmani/investment-ai",
     },
     {
