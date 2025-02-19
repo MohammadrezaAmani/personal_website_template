@@ -23,7 +23,7 @@ const Blog = () => {
           {t("blog.tags")}
         </h2>
         <div className="flex flex-wrap gap-2">
-          {allTags.map((tag) => (
+          {allTags.slice(0, content.tags_limit).map((tag) => (
             <button
               key={tag}
               onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
@@ -78,6 +78,28 @@ const Blog = () => {
           </article>
         ))}
       </div>
+      {allTags.length > content.tags_limit && (
+        <div className="mb-8 mt-10">
+          <h2 className="text-xl font-semibold text-white mb-4">
+            {t("blog.tags")}
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {allTags.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedTag === tag
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

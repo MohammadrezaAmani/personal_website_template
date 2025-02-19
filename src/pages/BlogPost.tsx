@@ -53,7 +53,7 @@ const BlogPost: React.FC = () => {
               </span>
             ))}
           </div>
-          <div className="prose-invert max-w-none">
+          <div className="prose-invert max-w-none text-white">
             <ReactMarkdown
               components={{
                 code({

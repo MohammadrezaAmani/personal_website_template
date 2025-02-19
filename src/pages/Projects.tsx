@@ -8,7 +8,7 @@ const Projects = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   const allTags = Array.from(
-    new Set(projects.flatMap((project) => project.tags)),
+    new Set(projects.flatMap((project) => project.tags))
   );
   const filteredProjects = selectedTag
     ? projects.filter((project) => project.tags.includes(selectedTag))
@@ -23,7 +23,7 @@ const Projects = () => {
       {/* Tags filter */}
       <div className="mb-8">
         <div className="flex flex-wrap gap-2">
-          {allTags.map((tag) => (
+          {allTags.slice(0, content.tags_limit).map((tag) => (
             <button
               key={tag}
               onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
@@ -78,6 +78,25 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      {allTags.length > content.tags_limit && (
+        <div className="mb-8 mt-10">
+          <div className="flex flex-wrap gap-2">
+            {allTags.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedTag === tag
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

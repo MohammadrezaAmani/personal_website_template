@@ -15,6 +15,7 @@ export default {
   default_blog_image:
     "https://www-static.cdn-one.com/cmsimages/en_what-is-a-blog-1.png",
   default_user_image: "https://avatars.githubusercontent.com/u/55929607?v=4",
+  tags_limit: 5,
   about: {
     name: "Mohammadreza Amani",
     title: "Software Engineer & AI Specialist",
