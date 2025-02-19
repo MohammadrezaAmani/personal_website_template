@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "blog": "Blog",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "resume": "Currículum",
+    "faq": "Preguntas Frecuentes"
+  },
+  "common": {
+    "readMore": "Leer Más",
+    "downloadResume": "Descargar Currículum",
+    "search": "Buscar",
+    "noResults": "No se encontraron resultados",
+    "loading": "Cargando..."
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "contact": "Contacto",
+    "skills": "Habilidades",
+    "interests": "Intereses"
+  },
+  "blog": {
+    "latest": "Últimas Publicaciones",
+    "categories": "Categorías",
+    "tags": "Etiquetas"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "viewProject": "Ver Proyecto"
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "current": "Actual",
+    "previous": "Anterior"
+  },
+  "education": {
+    "title": "Educación",
+    "degree": "Título",
+    "period": "Período"
+  },
+  "resume": {
+    "title": "Currículum",
+    "download": "Descargar PDF",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "education": "Educación"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "searchPlaceholder": "Buscar preguntas..."
+  }
+}

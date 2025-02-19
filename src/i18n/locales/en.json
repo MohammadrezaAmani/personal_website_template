@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "resume": "Resume",
+    "faq": "FAQ"
+  },
+  "common": {
+    "readMore": "Read More",
+    "downloadResume": "Download Resume",
+    "search": "Search",
+    "noResults": "No results found",
+    "loading": "Loading..."
+  },
+  "about": {
+    "title": "About Me",
+    "contact": "Contact",
+    "skills": "Skills",
+    "interests": "Interests"
+  },
+  "blog": {
+    "latest": "Latest Posts",
+    "categories": "Categories",
+    "tags": "Tags"
+  },
+  "projects": {
+    "title": "My Projects",
+    "viewProject": "View Project"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "current": "Current",
+    "previous": "Previous"
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Degree",
+    "period": "Period"
+  },
+  "resume": {
+    "title": "Resume",
+    "download": "Download PDF",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "searchPlaceholder": "Search questions..."
+  }
+}
