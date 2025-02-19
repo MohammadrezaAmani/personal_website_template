@@ -11,16 +11,18 @@ export default {
   site_name: "Mohammadreza Amani",
   footer_note: `© ${new Date().getFullYear()} Portfolio. All rights reserved.`,
   default_project_image:
-    "https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322",
+    "https://raw.githubusercontent.com/MohammadrezaAmani/static-file-store/refs/heads/main/projects/resume/images/defaults/project_default.jpg",
   default_blog_image:
-    "https://www-static.cdn-one.com/cmsimages/en_what-is-a-blog-1.png",
-  default_user_image: "https://avatars.githubusercontent.com/u/55929607?v=4",
+    "https://raw.githubusercontent.com/MohammadrezaAmani/static-file-store/refs/heads/main/projects/resume/images/defaults/blog_default.jpg",
+  default_user_image:
+    "https://raw.githubusercontent.com/MohammadrezaAmani/static-file-store/refs/heads/main/projects/resume/images/defaults/user_default.jpg",
   tags_limit: 5,
   about: {
     name: "Mohammadreza Amani",
     title: "Software Engineer & AI Specialist",
     bio: "Software Engineer with expertise in backend development, AI models (LLMs & Computer Vision), and scalable web applications.",
-    image: "https://avatars.githubusercontent.com/u/64687226",
+    image:
+      "https://raw.githubusercontent.com/MohammadrezaAmani/static-file-store/refs/heads/main/projects/resume/images/mohammadreza-amani-dark.png",
     social: [
       {
         name: "github",
