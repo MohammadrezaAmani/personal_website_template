@@ -1,4 +1,4 @@
-# Personal Portofilo Template
+# Personal Portfolio Template
 
 > [!TIP]
 > **[Live Demo](https://mohammadrezaamani.github.io/)**
