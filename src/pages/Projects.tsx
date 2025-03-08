@@ -8,7 +8,7 @@ const Projects = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   const allTags = Array.from(
-    new Set(projects.flatMap((project) => project.tags))
+    new Set(projects.flatMap((project) => project.tags)),
   );
   const filteredProjects = selectedTag
     ? projects.filter((project) => project.tags.includes(selectedTag))
